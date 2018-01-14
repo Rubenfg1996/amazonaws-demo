@@ -12,9 +12,11 @@
             //O include para que de warning y continue en vez de error
             //O include_once /require_once para que solo lo cargue una vez y no redeclare variables por error
             require ('contacto.php');
-            $miContacto = new Contacto("Rubén","Fernández Galán",21,"ruben@ruben.com");
+            $miContacto = new Contacto("Rubén","Fernández Galán",21,null);
             
-             echo "El contacto se llama $miContacto->nombre $miContacto->apellidos";
+            $miContacto->setEmail("ruben@ruben.com");
+            echo "El contacto se llama $miContacto->nombre $miContacto->apellidos";
+            echo "<br>El email de contacto es $miContacto->email";
         ?>
     </body>
 </html>

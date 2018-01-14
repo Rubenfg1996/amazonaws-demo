@@ -12,4 +12,8 @@ class contacto {
         $this->edad = $miEdad;
         $this->email = $miEmail;
     }
+    
+    function setEmail($miEmail){
+        $this->email = $miEmail;
+    }
 }
