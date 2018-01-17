@@ -15,6 +15,8 @@
             $miContacto = new Contacto("Rubén","Fernández Galán",21,null);
             
             $miContacto->setEmail("ruben@ruben.com");
+            
+            $miContacto->email = "ruben@ruben.com";
             echo "El contacto se llama $miContacto->nombre $miContacto->apellidos";
             echo "<br>El email de contacto es $miContacto->email";
         ?>
