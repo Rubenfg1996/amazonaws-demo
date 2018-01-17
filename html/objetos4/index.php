@@ -9,7 +9,7 @@
     
     //Instancio el controlador
     
-    $controller = new contactoController();
+    $controller = new ContactoController();
     
     //Ejecuto el método por defecto del controlador
     
