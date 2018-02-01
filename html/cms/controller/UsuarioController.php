@@ -27,7 +27,7 @@ class UsuarioController {
             $clave = filter_input(INPUT_POST, 'contrasena', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             if($usuario && $clave){
                 //Compruebo que existe el usuario
-                if (compruebaUsuario($usuario,$clave)){
+                if ($this->compruebaUsuario($usuario,$clave)){
                     //Entro al panel
                     $mensaje = "Hola crack titan mastodonte";
                 }else{
@@ -44,7 +44,7 @@ class UsuarioController {
     
     function compruebaUsuario($usuario, $calve){
         //Select con OBJ
-        $resultado = $this->db->query("SELECT * FROM usuarios WHERE usuario=$usuario");
+        $resultado = $this->db->query("SELECT * FROM usuarios WHERE usuario='.$usuario.'");
         //Asigno consulta a una variable
         $data = $resultado->fetch(\PDO::FETCH_OBJ);
         //Return
